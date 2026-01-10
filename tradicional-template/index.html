@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Estilo Urbano - Cortes de Cabello Profesionales en Chihuahua</title>
+    <meta name="description" content="Barbería profesional en Chihuahua. Cortes de cabello modernos, afeitados tradicionales y servicio personalizado. Ubicados en Calle Principal 123, Chihuahua. Agenda tu cita ahora.">
+    <meta name="keywords" content="barbería en Chihuahua, cortes de cabello en Chihuahua, barbero profesional en Chihuahua, afeitados en Chihuahua, barber shop en Chihuahua">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Barbería Estilo Urbano">
+    <meta name="geo.region" content="MX">
+    <meta name="geo.placename" content="Chihuahua">
+    <meta name="geo.position" content="latitude;longitude"> <!-- Reemplazar con coordenadas reales -->
+    <meta name="ICBM" content="latitude, longitude"> <!-- Reemplazar con coordenadas reales -->
+    <link rel="canonical" href="https://tu-dominio.com"> <!-- Reemplazar con URL real -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+    </style>
+</head>
+<body class="tradicional">
+    <!-- Selector de estilos -->
+    <div id="style-selector">
+        <div class="style-name" id="current-style">Blackwork</div>
+        <button class="style-btn active" onclick="changeGlobalStyle('blackwork', this)">Blackwork</button>
+        <button class="style-btn" onclick="changeGlobalStyle('realista', this)">Realista</button>
+        <button class="style-btn" onclick="changeGlobalStyle('tradicional', this)">Tradicional</button>
+        <button class="style-btn" onclick="changeGlobalStyle('gothic', this)">Gothic</button>
+    </div>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="container">
+   <h1 class="hero-title">
+  Barbería Estilo Urbano
+  <span class="subtitle">Cortes de Cabello Profesionales en Chihuahua</span>
+</h1>
+
+
+            <p>Estilo, precisión y profesionalismo en cada corte. Confía en Barbería Estilo Urbano para tu look perfecto.</p>
+            <div class="buttons">
+                <a href="https://wa.me/526141234567?text=Hola,%20quiero%20agendar%20un%20corte%20de%20cabello" class="btn">Agendar por WhatsApp</a>
+                <a href="#styles" class="btn btn-secondary">Ver servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre la Barbería -->
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Barbería Estilo Urbano</h2>
+            <p>Barbería Estilo Urbano es una barbería profesional en Chihuahua fundada con la pasión por el estilo masculino. Nuestro enfoque se centra en cortes modernos, afeitados tradicionales, la higiene impecable, el profesionalismo en cada sesión y un trato personalizado para cada cliente. Desde nuestros inicios, hemos construido una reputación basada en la calidad y la confianza.</p>
+        </div>
+    </section>
+
+    <!-- Catálogo de Cortes -->
+    <section id="catalog">
+        <div class="container">
+            <h2>Catálogo de Cortes</h2>
+            <div class="catalog-tabs">
+                <button class="catalog-tab active" onclick="changeCatalog('modernos', this)">Cortes Modernos</button>
+                <button class="catalog-tab" onclick="changeCatalog('clasicos', this)">Cortes Clásicos</button>
+                <button class="catalog-tab" onclick="changeCatalog('afeitados', this)">Afeitados</button>
+                <button class="catalog-tab" onclick="changeCatalog('urbanos', this)">Cortes Urbanos</button>
+                <button class="catalog-tab" onclick="changeCatalog('barba', this)">Barba y Bigote</button>
+                <button class="catalog-tab" onclick="changeCatalog('ninos', this)">Cortes para Niños</button>
+                <button class="catalog-tab" onclick="changeCatalog('especiales', this)">Servicios Especiales</button>
+            </div>
+            <div class="catalog-content">
+                <div id="modernos" class="catalog-category active">
+                    <div class="catalog-grid">
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Fade</h3>
+                            <p class="description">Un corte de cabello que se desvanece gradualmente desde el cabello más largo en la parte superior hasta el cabello corto o rapado en los lados y la parte posterior.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="fade-1.jpg" alt="Fade Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="fade-2.jpg" alt="Fade Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="fade-3.jpg" alt="Fade Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Pompadour</h3>
+                            <p class="description">Un estilo clásico con el cabello peinado hacia arriba y hacia atrás desde la frente, creando un volumen en la parte superior.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="pompadour-1.jpg" alt="Pompadour Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="pompadour-2.jpg" alt="Pompadour Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="pompadour-3.jpg" alt="Pompadour Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Quiff</h3>
+                            <p class="description">Similar al pompadour pero con el cabello peinado hacia arriba en la frente, dejando los lados más cortos.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="quiff-1.jpg" alt="Quiff Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="quiff-2.jpg" alt="Quiff Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="quiff-3.jpg" alt="Quiff Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Undercut</h3>
+                            <p class="description">Un corte donde los lados y la parte posterior están rapados o muy cortos, mientras que la parte superior permanece más larga.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="undercut-1.jpg" alt="Undercut Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="undercut-2.jpg" alt="Undercut Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="undercut-3.jpg" alt="Undercut Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Mohawk</h3>
+                            <p class="description">Un corte donde se rapa una franja central desde la frente hasta la nuca, dejando mechones largos a los lados.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="mohawk-1.jpg" alt="Mohawk Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="mohawk-2.jpg" alt="Mohawk Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="mohawk-3.jpg" alt="Mohawk Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>French Crop</h3>
+                            <p class="description">Un corte corto con los lados y la parte posterior muy cortos, y la parte superior ligeramente más larga y peinada hacia adelante.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="french-crop-1.jpg" alt="French Crop Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="french-crop-2.jpg" alt="French Crop Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="french-crop-3.jpg" alt="French Crop Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Shag</h3>
+                            <p class="description">Un corte desordenado con capas irregulares para un look despeinado.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="shag-1.jpg" alt="Shag Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="shag-2.jpg" alt="Shag Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="shag-3.jpg" alt="Shag Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Mullet</h3>
+                            <p class="description">Cabello largo en la parte posterior y los lados, corto en la parte superior y frente.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="mullet-1.jpg" alt="Mullet Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="mullet-2.jpg" alt="Mullet Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="mullet-3.jpg" alt="Mullet Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Top Knot</h3>
+                            <p class="description">Un estilo con el cabello largo atado en un moño en la parte superior de la cabeza.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="top-knot-1.jpg" alt="Top Knot Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="top-knot-2.jpg" alt="Top Knot Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="top-knot-3.jpg" alt="Top Knot Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Slicked Back</h3>
+                            <p class="description">El cabello peinado hacia atrás con producto para mantenerlo liso y brillante.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="slicked-back-1.jpg" alt="Slicked Back Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="slicked-back-2.jpg" alt="Slicked Back Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="slicked-back-3.jpg" alt="Slicked Back Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Afro</h3>
+                            <p class="description">Un estilo natural con el cabello rizado o texturizado, cortado para mantener su forma redonda.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="afro-1.jpg" alt="Afro Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="afro-2.jpg" alt="Afro Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="afro-3.jpg" alt="Afro Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Dreadlocks</h3>
+                            <p class="description">Cabello trenzado en mechones largos y delgados.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="dreadlocks-1.jpg" alt="Dreadlocks Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="dreadlocks-2.jpg" alt="Dreadlocks Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="dreadlocks-3.jpg" alt="Dreadlocks Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="clasicos" class="catalog-category">
+                    <div class="catalog-grid">
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Caesar</h3>
+                            <p class="description">Un corte corto con el cabello peinado hacia adelante en la frente, creando una franja horizontal.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="caesar-1.jpg" alt="Caesar Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="caesar-2.jpg" alt="Caesar Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="caesar-3.jpg" alt="Caesar Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Ivy League</h3>
+                            <p class="description">Un corte clásico con los lados cortos y la parte superior peinada hacia un lado.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="ivy-league-1.jpg" alt="Ivy League Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ivy-league-2.jpg" alt="Ivy League Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ivy-league-3.jpg" alt="Ivy League Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Crew Cut</h3>
+                            <p class="description">Un corte militar muy corto en todos los lados, con la parte superior ligeramente más larga.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="crew-cut-1.jpg" alt="Crew Cut Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="crew-cut-2.jpg" alt="Crew Cut Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="crew-cut-3.jpg" alt="Crew Cut Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Buzz Cut</h3>
+                            <p class="description">Un corte muy corto en toda la cabeza, casi rapado.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="buzz-cut-1.jpg" alt="Buzz Cut Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="buzz-cut-2.jpg" alt="Buzz Cut Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="buzz-cut-3.jpg" alt="Buzz Cut Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Side Part</h3>
+                            <p class="description">Un corte con el cabello peinado hacia un lado, creando una raya lateral.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="side-part-1.jpg" alt="Side Part Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="side-part-2.jpg" alt="Side Part Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="side-part-3.jpg" alt="Side Part Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Bowl Cut</h3>
+                            <p class="description">Un corte donde el cabello se corta alrededor de la cabeza como si se usara un tazón como guía.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="bowl-cut-1.jpg" alt="Bowl Cut Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="bowl-cut-2.jpg" alt="Bowl Cut Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="bowl-cut-3.jpg" alt="Bowl Cut Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Pixie</h3>
+                            <p class="description">Un corte muy corto y femenino, con capas irregulares.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="pixie-1.jpg" alt="Pixie Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="pixie-2.jpg" alt="Pixie Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="pixie-3.jpg" alt="Pixie Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Bob</h3>
+                            <p class="description">Un corte a la altura de la barbilla o hombros, recto o con capas.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="bob-1.jpg" alt="Bob Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="bob-2.jpg" alt="Bob Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="bob-3.jpg" alt="Bob Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="afeitados" class="catalog-category">
+                    <div class="catalog-grid">
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Undercut con Afeitado</h3>
+                            <p class="description">Un undercut combinado con afeitado preciso en los lados para un look moderno y definido.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="undercut-shave-1.jpg" alt="Undercut con Afeitado Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="undercut-shave-2.jpg" alt="Undercut con Afeitado Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="undercut-shave-3.jpg" alt="Undercut con Afeitado Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Fade con Afeitado</h3>
+                            <p class="description">Un fade suave combinado con afeitado en los lados para un acabado limpio y profesional.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="fade-shave-1.jpg" alt="Fade con Afeitado Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="fade-shave-2.jpg" alt="Fade con Afeitado Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="fade-shave-3.jpg" alt="Fade con Afeitado Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Mohawk con Afeitado</h3>
+                            <p class="description">Un mohawk con afeitado preciso en la franja central para un estilo audaz y definido.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="mohawk-shave-1.jpg" alt="Mohawk con Afeitado Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="mohawk-shave-2.jpg" alt="Mohawk con Afeitado Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="mohawk-shave-3.jpg" alt="Mohawk con Afeitado Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="urbanos" class="catalog-category">
+                    <div class="catalog-grid">
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Low Fade</h3>
+                            <p class="description">Un fade bajo que comienza justo por encima de las orejas, creando una transición suave desde el cabello largo en la parte superior.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="low-fade-1.jpg" alt="Low Fade Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="low-fade-2.jpg" alt="Low Fade Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="low-fade-3.jpg" alt="Low Fade Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Mid Fade</h3>
+                            <p class="description">Un fade medio que llega hasta la mitad de los lados, ideal para un look moderno y versátil.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="mid-fade-1.jpg" alt="Mid Fade Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="mid-fade-2.jpg" alt="Mid Fade Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="mid-fade-3.jpg" alt="Mid Fade Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>High Fade</h3>
+                            <p class="description">Un fade alto que comienza cerca de la corona, dejando muy poco cabello en los lados para un estilo audaz.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="high-fade-1.jpg" alt="High Fade Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="high-fade-2.jpg" alt="High Fade Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="high-fade-3.jpg" alt="High Fade Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Skin Fade</h3>
+                            <p class="description">Un fade que llega hasta la piel, creando un contraste dramático entre los lados rapados y la parte superior.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="skin-fade-1.jpg" alt="Skin Fade Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="skin-fade-2.jpg" alt="Skin Fade Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="skin-fade-3.jpg" alt="Skin Fade Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Taper</h3>
+                            <p class="description">Un corte gradual que se estrecha desde la parte superior hacia los lados, sin llegar a rapar completamente.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="taper-1.jpg" alt="Taper Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="taper-2.jpg" alt="Taper Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="taper-3.jpg" alt="Taper Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Crop</h3>
+                            <p class="description">Un corte corto y texturizado en toda la cabeza, con énfasis en la forma y el volumen.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="crop-1.jpg" alt="Crop Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="crop-2.jpg" alt="Crop Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="crop-3.jpg" alt="Crop Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Buzz Cut</h3>
+                            <p class="description">Un corte muy corto en toda la cabeza, fácil de mantener y con un look limpio y fresco.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="buzz-cut-1.jpg" alt="Buzz Cut Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="buzz-cut-2.jpg" alt="Buzz Cut Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="buzz-cut-3.jpg" alt="Buzz Cut Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Wolf Cut</h3>
+                            <p class="description">Un corte con capas irregulares y mechones largos, creando un efecto salvaje y moderno.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="wolf-cut-1.jpg" alt="Wolf Cut Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="wolf-cut-2.jpg" alt="Wolf Cut Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="wolf-cut-3.jpg" alt="Wolf Cut Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="barba" class="catalog-category">
+                    <div class="catalog-grid">
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Perfilado de Barba</h3>
+                            <p class="description">Recorte preciso de la barba para definir líneas limpias y un aspecto profesional.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="barba-perfilado-1.jpg" alt="Perfilado de Barba Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="barba-perfilado-2.jpg" alt="Perfilado de Barba Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="barba-perfilado-3.jpg" alt="Perfilado de Barba Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Barba con Vapor</h3>
+                            <p class="description">Tratamiento con vapor para ablandar la barba antes del recorte, resultando en un acabado suave.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="barba-vapor-1.jpg" alt="Barba con Vapor Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="barba-vapor-2.jpg" alt="Barba con Vapor Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="barba-vapor-3.jpg" alt="Barba con Vapor Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Bigote Clásico</h3>
+                            <p class="description">Recorte y perfilado del bigote en un estilo tradicional, elegante y atemporal.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="bigote-clasico-1.jpg" alt="Bigote Clásico Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="bigote-clasico-2.jpg" alt="Bigote Clásico Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="bigote-clasico-3.jpg" alt="Bigote Clásico Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Barba Estilizada</h3>
+                            <p class="description">Diseño creativo en la barba, como patrones o formas geométricas para un look único.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="barba-estilizada-1.jpg" alt="Barba Estilizada Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="barba-estilizada-2.jpg" alt="Barba Estilizada Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="barba-estilizada-3.jpg" alt="Barba Estilizada Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Mantenimiento de Barba</h3>
+                            <p class="description">Servicio regular para mantener la barba en forma, con recortes y tratamientos hidratantes.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="barba-mantenimiento-1.jpg" alt="Mantenimiento de Barba Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="barba-mantenimiento-2.jpg" alt="Mantenimiento de Barba Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="barba-mantenimiento-3.jpg" alt="Mantenimiento de Barba Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ninos" class="catalog-category">
+                    <div class="catalog-grid">
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Corte para Niños Básico</h3>
+                            <p class="description">Corte simple y práctico para niños, fácil de peinar y mantener en el día a día.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="ninos-basico-1.jpg" alt="Corte para Niños Básico Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ninos-basico-2.jpg" alt="Corte para Niños Básico Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ninos-basico-3.jpg" alt="Corte para Niños Básico Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Corte Deportivo</h3>
+                            <p class="description">Corte corto y cómodo para actividades deportivas, con protección solar en la nuca.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="ninos-deportivo-1.jpg" alt="Corte Deportivo Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ninos-deportivo-2.jpg" alt="Corte Deportivo Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ninos-deportivo-3.jpg" alt="Corte Deportivo Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Corte con Diseño</h3>
+                            <p class="description">Corte divertido con diseños temáticos o patrones para expresar la personalidad del niño.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="ninos-diseno-1.jpg" alt="Corte con Diseño Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ninos-diseno-2.jpg" alt="Corte con Diseño Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ninos-diseno-3.jpg" alt="Corte con Diseño Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Corte Escolar</h3>
+                            <p class="description">Corte adecuado para el colegio, limpio y ordenado, siguiendo normas escolares si es necesario.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="ninos-escolar-1.jpg" alt="Corte Escolar Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ninos-escolar-2.jpg" alt="Corte Escolar Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="ninos-escolar-3.jpg" alt="Corte Escolar Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="especiales" class="catalog-category">
+                    <div class="catalog-grid">
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Tinte de Cabello</h3>
+                            <p class="description">Cambio de color profesional para cabello, con productos de calidad y técnicas avanzadas.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="tinte-1.jpg" alt="Tinte de Cabello Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="tinte-2.jpg" alt="Tinte de Cabello Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="tinte-3.jpg" alt="Tinte de Cabello Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Tratamiento Capilar</h3>
+                            <p class="description">Tratamientos hidratantes y reparadores para cabello dañado o seco, mejorando su salud y apariencia.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="tratamiento-1.jpg" alt="Tratamiento Capilar Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="tratamiento-2.jpg" alt="Tratamiento Capilar Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="tratamiento-3.jpg" alt="Tratamiento Capilar Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Peinado para Eventos</h3>
+                            <p class="description">Peinados elegantes y sofisticados para ocasiones especiales como bodas o fiestas.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="peinado-eventos-1.jpg" alt="Peinado para Eventos Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="peinado-eventos-2.jpg" alt="Peinado para Eventos Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="peinado-eventos-3.jpg" alt="Peinado para Eventos Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="haircut-type" onclick="toggleExamples(this)">
+                            <h3>Consulta de Estilo</h3>
+                            <p class="description">Sesión personalizada para asesorarte en el estilo que mejor se adapte a tu rostro y personalidad.</p>
+                            <div class="examples">
+                                <div class="example">
+                                    <img src="consulta-estilo-1.jpg" alt="Consulta de Estilo Ejemplo 1" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="consulta-estilo-2.jpg" alt="Consulta de Estilo Ejemplo 2" onclick="showFullScreen(this.src)">
+                                </div>
+                                <div class="example hidden">
+                                    <img src="consulta-estilo-3.jpg" alt="Consulta de Estilo Ejemplo 3" onclick="showFullScreen(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="gallery-grid">
+                <img class="gallery-item" src="corte1.jpg" alt="Corte clásico 1">
+                <img class="gallery-item" src="corte2.jpg" alt="Corte moderno 2">
+                <img class="gallery-item" src="corte3.jpg" alt="Afeitado profesional 3">
+                <img class="gallery-item" src="corte4.jpg" alt="Cuidado de barba 4">
+                <img class="gallery-item" src="corte5.jpg" alt="Corte fade 5">
+                <img class="gallery-item" src="corte6.jpg" alt="Estilo hipster 6">
+                <img class="gallery-item" src="corte7.jpg" alt="Corte militar 7">
+                <img class="gallery-item" src="corte8.jpg" alt="Barba recortada 8">
+            </div>
+        </div>
+    </section>
+
+    <!-- Higiene y Seguridad -->
+    <section id="hygiene">
+        <div class="container">
+            <h2>Higiene y Seguridad</h2>
+            <ul class="hygiene-list">
+                <li>Uso exclusivo de herramientas esterilizadas y desechables.</li>
+                <li>Cumplimiento estricto de normas de higiene y protocolos de seguridad.</li>
+                <li>Ambiente limpio y profesional para tu tranquilidad.</li>
+                <li>Compromiso con la salud y el bienestar de nuestros clientes.</li>
+            </ul>
+        </div>
+    </section>
+
+ <!-- Mapa flotante pequeño -->
+<div id="mini-map">
+    <iframe
+        src="https://www.google.com/maps?q=Barbería+Estilo+Urbano+Calle+Principal+123+Chihuahua+México&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+<!-- MAPA ÚNICO -->
+<div id="map-wrapper">
+    <iframe
+        src="https://www.google.com/maps?q=Barbería+Estilo+Urbano+Calle+Principal+123+Chihuahua+México&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+<!-- UBICACIÓN -->
+<section id="location">
+    <div class="container">
+        <h2>Ubicación</h2>
+        <p>
+            Estamos ubicados en <strong>Calle Principal 123</strong>,
+            en la ciudad de <strong>Chihuahua, México</strong>.
+            Fácil acceso y estacionamiento disponible.
+            Ven a visitarnos para cortes de cabello profesionales en Chihuahua.
+        </p>
+    </div>
+</section>
+
+
+
+    <!-- Contacto -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/526141234567">+52 614 123 4567</a></p>
+                <p><strong>Horarios:</strong> Lunes a Sábado 9:00 AM - 7:00 PM</p>
+                <p>¿Listo para tu corte perfecto? ¡Contáctanos hoy!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Barbería Estilo Urbano - Chihuahua. Todos los derechos reservados.</p>
+            <p><a href="#about">Sobre Nosotros</a> | <a href="#styles">Servicios</a> | <a href="#contact">Contacto</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Modal for full-screen image -->
+<div id="image-modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-image" src="" alt="Imagen a pantalla completa">
+</div>
