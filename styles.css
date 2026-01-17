@@ -127,6 +127,38 @@ a:hover {
 .nav-menu li a:hover {
     color: #ff4500;
 }
+@media (max-width: 768px) {
+
+  .nav-toggle {
+      display: block;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+  }
+
+  .nav-menu {
+      display: none; /* oculto por defecto */
+      flex-direction: column;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      margin-top: 10px;
+      padding: 15px 0;
+      gap: 15px;
+  }
+
+  .nav-menu.active {
+      display: flex; /* cuando tiene clase active */
+  }
+
+  .nav-menu li a {
+      font-size: 1.05rem;
+      padding: 10px 20px;
+      width: 100%;
+      box-sizing: border-box;
+  }
+}
 
 /* Hero */
 #hero {
