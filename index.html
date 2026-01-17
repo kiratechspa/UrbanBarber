@@ -28,11 +28,27 @@
         <button class="style-btn" onclick="changeGlobalStyle('gothic', this)">Gothic</button>
     </div>
 
+    <!-- Navegación principal -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">Nombre de tu Barbería</div>
+            <ul class="nav-menu">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#catalog">Catálogo</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#hygiene">Higiene</a></li>
+                <li><a href="#location">Ubicación</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero -->
     <section id="hero">
         <div class="container">
    <h1 class="hero-title">
-  Barbería Estilo Urbano
+  Nombre de tu BarBeria
   <span class="subtitle">Cortes de Cabello Profesionales en Chihuahua</span>
 </h1>
 
@@ -40,7 +56,7 @@
             <p>Estilo, precisión y profesionalismo en cada corte. Confía en Barbería Estilo Urbano para tu look perfecto.</p>
             <div class="buttons">
                 <a href="https://wa.me/526141234567?text=Hola,%20quiero%20agendar%20un%20corte%20de%20cabello" class="btn">Agendar por WhatsApp</a>
-                <a href="#styles" class="btn btn-secondary">Ver servicios</a>
+                <a href="#catalog" class="btn btn-secondary">Hacia el Catálogo</a>
             </div>
         </div>
     </section>
@@ -55,6 +71,7 @@
 
     <!-- Catálogo de Cortes -->
     <section id="catalog">
+        
         <div class="container">
             <h2>Catálogo de Cortes</h2>
             <div class="catalog-tabs">
@@ -762,7 +779,7 @@
     <!-- Galería -->
     <section id="gallery">
         <div class="container">
-            <h2>Galería</h2>
+            <h2>Tus cortes</h2>
             <div class="gallery-grid">
                 <img class="gallery-item" src="corte1.jpg" alt="Corte clásico 1">
                 <img class="gallery-item" src="corte2.jpg" alt="Corte moderno 2">
@@ -789,34 +806,27 @@
         </div>
     </section>
 
- <!-- Mapa flotante pequeño -->
-<div id="mini-map">
-    <iframe
-        src="https://www.google.com/maps?q=Barbería+Estilo+Urbano+Calle+Principal+123+Chihuahua+México&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
-
-<!-- MAPA ÚNICO -->
-<div id="map-wrapper">
-    <iframe
-        src="https://www.google.com/maps?q=Barbería+Estilo+Urbano+Calle+Principal+123+Chihuahua+México&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
-
 <!-- UBICACIÓN -->
 <section id="location">
     <div class="container">
         <h2>Ubicación</h2>
-        <p>
-            Estamos ubicados en <strong>Calle Principal 123</strong>,
-            en la ciudad de <strong>Chihuahua, México</strong>.
-            Fácil acceso y estacionamiento disponible.
-            Ven a visitarnos para cortes de cabello profesionales en Chihuahua.
-        </p>
+        <div class="location-content">
+            <div class="location-info">
+                <h3>Haz que te encuentren</h3>
+                <p><strong>Dirección:</strong> Tu Dirección</p>
+                <p><strong>Teléfono:</strong> (614) 123-4567</p>
+                <p><strong>Horarios:</strong> Lunes a Sábado: 9:00 AM - 7:00 PM<br>Domingo: Cerrado</p>
+                <p><strong>Estacionamiento:</strong> Disponible en las calles aledañas</p>
+                <p>Ven a visitarnos para cortes de cabello profesionales en el corazón de Chihuahua.</p>
+            </div>
+            <div class="location-map">
+                <iframe
+                    src="https://www.google.com/maps?q=Colonia+Revolución+Chihuahua+Chihuahua+México&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -830,6 +840,10 @@
                 <p><strong>WhatsApp:</strong> <a href="https://wa.me/526141234567">+52 614 123 4567</a></p>
                 <p><strong>Horarios:</strong> Lunes a Sábado 9:00 AM - 7:00 PM</p>
                 <p>¿Listo para tu corte perfecto? ¡Contáctanos hoy!</p>
+                 <div class="buttons">
+                <a href="https://wa.me/526141234567?text=Hola,%20quiero%20agendar%20un%20corte%20de%20cabello" class="btn">Agendar por WhatsApp</a>
+                
+            </div>
             </div>
         </div>
     </section>
