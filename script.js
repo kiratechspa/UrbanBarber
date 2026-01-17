@@ -1,47 +1,45 @@
 // ===============================
 // CAMBIO DE CATÁLOGO
 // ===============================
-function changeCatalog(category, event) {
+function changeCatalog(category, button) {
     const tabs = document.querySelectorAll('.catalog-tab');
     tabs.forEach(tab => tab.classList.remove('active'));
-    event.target.classList.add('active');
+    button.classList.add('active');
 
     const categories = document.querySelectorAll('.catalog-category');
     categories.forEach(cat => cat.classList.remove('active'));
-    document.getElementById(category).classList.add('active');
+
+    const activeCategory = document.getElementById(category);
+    if (activeCategory) {
+        activeCategory.classList.add('active');
+    }
 }
+
 
 // ===============================
 // MOSTRAR / OCULTAR EJEMPLOS
 // ===============================
 function toggleExamples(type) {
 
-    const allExamples = document.querySelectorAll('.example.hidden');
-    allExamples.forEach(example => {
-        example.classList.add('hidden');
+    const isExpanded = type.classList.contains('expanded');
+
+    // Cerrar todos
+    document.querySelectorAll('.haircut-type').forEach(t => {
+        t.classList.remove('expanded');
+        t.querySelectorAll('.example').forEach((ex, i) => {
+            if (i > 0) ex.classList.add('hidden');
+        });
     });
 
-    const allTypes = document.querySelectorAll('.haircut-type');
-    allTypes.forEach(t => t.classList.remove('expanded'));
-
-    const examples = type.querySelectorAll('.example');
-    let hasHidden = false;
-
-    examples.forEach((example, index) => {
-        if (index > 0) {
-            if (example.classList.contains('hidden')) {
-                example.classList.remove('hidden');
-                hasHidden = true;
-            } else {
-                example.classList.add('hidden');
-            }
-        }
-    });
-
-    if (hasHidden) {
+    // Si estaba cerrado → abrir
+    if (!isExpanded) {
         type.classList.add('expanded');
+        type.querySelectorAll('.example').forEach(ex => {
+            ex.classList.remove('hidden');
+        });
     }
 }
+
 
 // ===============================
 // MODAL DE IMÁGENES
@@ -49,21 +47,26 @@ function toggleExamples(type) {
 function showFullScreen(src) {
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-image');
-    modal.style.display = 'flex';
-    modalImg.src = src;
+
+    if (modal && modalImg) {
+        modal.style.display = 'flex';
+        modalImg.src = src;
+    }
 }
 
 function closeModal() {
     const modal = document.getElementById('image-modal');
-    modal.style.display = 'none';
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
 
-window.onclick = function(event) {
+window.addEventListener('click', function (event) {
     const modal = document.getElementById('image-modal');
     if (event.target === modal) {
         modal.style.display = 'none';
     }
-}
+});
 
 // ===============================
 // CAMBIO DE ESTILO GLOBAL
@@ -73,11 +76,14 @@ function changeGlobalStyle(style, button) {
     const buttons = document.querySelectorAll('.style-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    button.classList.add('active');
+    if (button) button.classList.add('active');
+
     document.body.className = style;
 
-    document.getElementById('current-style').textContent =
-        style.charAt(0).toUpperCase() + style.slice(1);
+    const label = document.getElementById('current-style');
+    if (label) {
+        label.textContent = style.charAt(0).toUpperCase() + style.slice(1);
+    }
 }
 
 // ===============================
@@ -89,13 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.nav-menu');
 
     if (toggle && menu) {
-
         toggle.addEventListener('click', () => {
             menu.classList.toggle('active');
             toggle.textContent = menu.classList.contains('active') ? '✖' : '☰';
         });
 
-        // Cerrar menú al hacer clic en un link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('active');
@@ -110,9 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     });
 });
