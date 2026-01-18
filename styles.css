@@ -64,6 +64,8 @@ a:hover {
     flex-direction: row;
     gap: 5px;
     font-size: 0.7rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
 }
 .style-btn {
     padding: 3px 6px;
@@ -83,7 +85,19 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* Navegación principal */
+/* Ocultar selector de estilos */
+#style-selector.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  display: none;
+}
+
+
+/* ===============================
+   NAVEGACIÓN PRINCIPAL
+================================ */
 #main-nav {
     position: fixed;
     top: 0;
@@ -94,21 +108,37 @@ a:hover {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #ff4500;
     transition: all 0.3s ease;
+      
+
+    
 }
+
+/* ===============================
+   CONTENEDOR
+================================ */
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 20px;
 }
+
+/* ===============================
+   LOGO
+================================ */
 .nav-logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #ff4500;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
+/* ===============================
+   MENÚ DESKTOP
+================================ */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -116,6 +146,7 @@ a:hover {
     padding: 0;
     gap: 30px;
 }
+
 .nav-menu li a {
     color: #fff;
     text-decoration: none;
@@ -124,40 +155,117 @@ a:hover {
     font-size: 0.9rem;
     transition: color 0.3s;
 }
+
 .nav-menu li a:hover {
     color: #ff4500;
 }
+
+/* ===============================
+   BOTÓN HAMBURGUESA
+================================ */
+.nav-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* ===============================
+   MOBILE NAV
+================================ */
 @media (max-width: 768px) {
 
-  .nav-toggle {
-      display: block;
-      font-size: 2rem;
-      background: none;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-  }
+    .nav-toggle {
+        display: block;
+    }
 
-  .nav-menu {
-      display: none; /* oculto por defecto */
-      flex-direction: column;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.95);
-      margin-top: 10px;
-      padding: 15px 0;
-      gap: 15px;
-  }
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
 
-  .nav-menu.active {
-      display: flex; /* cuando tiene clase active */
-  }
+        flex-direction: column;
+        gap: 18px;
 
-  .nav-menu li a {
-      font-size: 1.05rem;
-      padding: 10px 20px;
-      width: 100%;
-      box-sizing: border-box;
-  }
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.96),
+            rgba(20, 20, 20, 0.98)
+        );
+
+        padding: 25px 0;
+
+        transform: translateY(-15px);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* ===============================
+       LINKS ANIMADOS (STAGGER)
+    ================================ */
+    .nav-menu li {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-menu.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-menu.active li:nth-child(1) { transition-delay: 0.05s; }
+    .nav-menu.active li:nth-child(2) { transition-delay: 0.1s; }
+    .nav-menu.active li:nth-child(3) { transition-delay: 0.15s; }
+    .nav-menu.active li:nth-child(4) { transition-delay: 0.2s; }
+    .nav-menu.active li:nth-child(5) { transition-delay: 0.25s; }
+
+    /* ===============================
+       ESTILO DE LINKS MOBILE
+    ================================ */
+    .nav-menu li a {
+        position: relative;
+        padding: 14px 30px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-size: 1.05rem;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-menu li a::before {
+        content: "";
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%) scaleX(0);
+        width: 4px;
+        height: 60%;
+        background-color: #ff4500;
+        border-radius: 2px;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-menu li a:hover::before {
+        transform: translateY(-50%) scaleX(1);
+    }
+
+    .nav-menu li a:hover {
+        background: rgba(255, 69, 0, 0.08);
+        color: #ff4500;
+    }
 }
 
 /* Hero */
@@ -1258,4 +1366,13 @@ body.gothic h2::after {
     font-weight: 400;
     margin-top: 10px;
     opacity: 0.85;
+}
+#hero,
+#about,
+#catalog,
+#gallery,
+#hygiene,
+#location,
+#contact {
+  scroll-margin-top: 100px;
 }

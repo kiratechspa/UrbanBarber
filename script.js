@@ -15,7 +15,6 @@ function changeCatalog(category, button) {
     }
 }
 
-
 // ===============================
 // MOSTRAR / OCULTAR EJEMPLOS
 // ===============================
@@ -23,7 +22,6 @@ function toggleExamples(type) {
 
     const isExpanded = type.classList.contains('expanded');
 
-    // Cerrar todos
     document.querySelectorAll('.haircut-type').forEach(t => {
         t.classList.remove('expanded');
         t.querySelectorAll('.example').forEach((ex, i) => {
@@ -31,7 +29,6 @@ function toggleExamples(type) {
         });
     });
 
-    // Si estaba cerrado → abrir
     if (!isExpanded) {
         type.classList.add('expanded');
         type.querySelectorAll('.example').forEach(ex => {
@@ -39,7 +36,6 @@ function toggleExamples(type) {
         });
     }
 }
-
 
 // ===============================
 // MODAL DE IMÁGENES
@@ -82,18 +78,28 @@ function changeGlobalStyle(style, button) {
 
     const label = document.getElementById('current-style');
     if (label) {
-        label.textContent = style.charAt(0).toUpperCase() + style.slice(1);
+        label.textContent =
+            style.charAt(0).toUpperCase() + style.slice(1);
+    }
+
+    // 🔥 OCULTAR SELECTOR AL ELEGIR ESTILO
+    const selector = document.getElementById('style-selector');
+    if (selector) {
+        selector.classList.add('hidden');
     }
 }
 
 // ===============================
-// MENÚ DE NAVEGACIÓN MÓVIL
+// MENÚ DE NAVEGACIÓN + LOGO
 // ===============================
 document.addEventListener('DOMContentLoaded', () => {
 
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.querySelector('.nav-menu');
+    const selector = document.getElementById('style-selector');
+    const logo = document.querySelector('.nav-logo');
 
+    // MENU MOBILE
     if (toggle && menu) {
         toggle.addEventListener('click', () => {
             menu.classList.toggle('active');
@@ -105,6 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 menu.classList.remove('active');
                 toggle.textContent = '☰';
             });
+        });
+    }
+
+    // 🔥 MOSTRAR SELECTOR AL CLICK EN LOGO
+    if (logo && selector) {
+        logo.addEventListener('click', () => {
+            selector.classList.remove('hidden');
         });
     }
 
